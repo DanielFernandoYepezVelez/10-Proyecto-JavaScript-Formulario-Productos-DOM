@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.title {
+    text-decoration: none;
+    color: rgb(4, 121, 255);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
