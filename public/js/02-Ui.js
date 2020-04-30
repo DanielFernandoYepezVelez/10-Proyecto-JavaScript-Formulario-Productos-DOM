@@ -43,6 +43,10 @@ class Ui {
         this.renderizarDOMLocalStorage();
     }
 
+    limpiarFormulario(form) {
+        form.reset();
+    }
+
     eliminarProductoDOM(e) {
         if (e.target.classList.contains('btn-danger')) {
             console.log(e.target.parentElement.parentElement.remove());

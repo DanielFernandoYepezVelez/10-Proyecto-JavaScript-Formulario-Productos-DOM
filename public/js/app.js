@@ -40,7 +40,7 @@ const obtenerValoresDOM = (e) => {
     ui.renderizarDOM(productList);
 
     /* Limpiar El formulario */
-    form.reset();
+    ui.limpiarFormulario(form);
 }
 
 const eliminarDOM = (e) => {

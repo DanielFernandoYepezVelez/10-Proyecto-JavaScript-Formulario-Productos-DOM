@@ -42,9 +42,4 @@ class Data {
 
         localStorage.setItem('products', JSON.stringify(products))
     }
-
-    // deleteLocalStorage() {
-
-
-    // }
 }
