@@ -21,3 +21,19 @@ input[type="radio"],
 input[type="checkbox"] {
     cursor: pointer;
 }
+
+.browser {
+    cursor: pointer;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+}

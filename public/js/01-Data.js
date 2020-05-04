@@ -1,45 +1,34 @@
 class Data {
-    constructor(name = '', selectedCategory = '', price = 0, quantity = 0, email = '', year = 0, terms = '') {
-        this.name = name;
-        this.selectedCategory = selectedCategory;
-        this.price = price;
-        this.quantity = quantity;
-        this.email = email;
-        this.year = year;
-        this.terms = terms;
-        this.init();
-    }
+    obtenerDatosFormulario(elementos) {
+        /* Campos de tipo text, number, email */
+        const vName = elementos[0].value;
+        const vPrice = elementos[1].value;
+        const vYear = elementos[2].value;
+        const vEmail = elementos[3].value;
 
-    init() {
-        document.addEventListener('DOMContentLoaded', this.obtenerDatosLocalStorage);
-    }
+        /* Campos de tipo select */
+        const category = elementos[4];
+        const vSelectedCategory = category.options[category.selectedIndex].value;
 
-    obtenerDatosLocalStorage() {
-        let products;
+        /* Deben Ser Pedidos Aqui Y Directamente Del DOM, Para Que Su Valor Sea Leido Correctamente */
+        /* Campos de tipo radio */
+        const vQuantity = document.querySelector('input[type="radio"]:checked').value;
 
-        if (localStorage.getItem('products') === null) {
-            products = [];
-        } else {
-            products = JSON.parse(localStorage.getItem('products'));
+        /* Campos de tipo checkbox */
+        const vTerms = document.querySelector('input[type="checkbox"]:checked').value;
+
+        /* Campo de tipo Imagen */
+        const vImg = document.getElementById('image').files[0];
+
+        return {
+            vName,
+            vPrice,
+            vYear,
+            vEmail,
+            vSelectedCategory,
+            vQuantity,
+            vTerms,
+            vImg
         }
-
-        return products;
-    }
-
-    saveLocalStorage(product) {
-        this.name = product.name;
-        this.selectedCategory = product.selectedCategory;
-        this.price = Number(product.price);
-        this.quantity = Number(product.quantity);
-        this.email = product.email;
-        this.year = Number(product.year);
-        this.terms = product.terms;
-
-        /* VALIDACIONES PENDIENTES (EXPRESIONES REGULARES)*/
-
-        const products = this.obtenerDatosLocalStorage();
-        products.push(product);
-
-        localStorage.setItem('products', JSON.stringify(products))
     }
 }

@@ -2,15 +2,15 @@
 <html lang="es" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="" content="">
-    <meta name="" content="">
-    <meta name="" content="">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>App Productos</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
 </head>
 
 <body>
@@ -26,24 +26,24 @@
                     <div class="card-header">
                         <h4>Agregar Producto</h4>
                     </div>
-                    <form id="form" class="card-body" action="#">
+                    <form id="form" class="card-body" action="#" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Nombre:</label>
-                            <input class="form-control" type="text" name="text" id="name">
+                            <input class="form-control" type="text" name="text" id="name" />
                         </div>
                         <div class="form-group">
                             <label for="category">Categoria:</label>
                             <select class="form-control" name="categoria" id="selectCategory">
-                                <option value="ninguno">Ninguno</option>
-                                <option value="granos">Granos</option>
-                                <option value="verduras">Verduras</option>
-                                <option value="dulces">Dulces</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                  <option value="ninguno">Ninguno</option>
+                  <option value="granos">Granos</option>
+                  <option value="verduras">Verduras</option>
+                  <option value="dulces">Dulces</option>
+                  <option value="otro">Otro</option>
+                </select>
                         </div>
                         <div class="form-group">
                             <label for="price">Precio:</label>
-                            <input class="form-control" step="0.01" type="number" name="price" id="price">
+                            <input class="form-control" step="0.01" type="number" name="price" id="price" />
                         </div>
                         <div class="form-group">
                             <div>
@@ -53,37 +53,63 @@
                             <!-- El tipo permite que cambie de posicion el radio-->
                             <div class="ml-4">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="tipo" value="1" checked>
-                                    1
-                                  </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipo"
+                      value="1"
+                      checked
+                    />
+                    1
+                  </label>
                             </div>
                             <div class="ml-4">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="tipo" value="2">
-                                    2
-                                  </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipo"
+                      value="2"
+                    />
+                    2
+                  </label>
                             </div>
                             <div class="ml-4">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="tipo" value="superior">
-                                    Superior
-                                  </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipo"
+                      value="superior"
+                    />
+                    Superior
+                  </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email">Coreo Electronico:</label>
-                            <input class="form-control" type="email" name="email" id="email">
+                            <input class="form-control" type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="img">Seleccionar Imagen:</label>
+                            <div class="custom-file input-group">
+                                <input type="file" accept=".jpg, .png, .jpeg" class="custom-file-input browser" id="image" />
+                                <label for="image" class="custom-file-label"></label>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="year">Año Creado:</label>
-                            <input class="form-control" min="1993" value="2018" max="2020" type="number" name="year" id="year">
+                            <input class="form-control" min="1993" value="2018" max="2020" type="number" name="year" id="year" />
                         </div>
-                        <p>Acepta Términos Y Condiciones <input type="checkbox" name="check" id="checkbox"></p>
-                        <input class="btn btn-primary btn-block" type="submit" value="Guardar">
+                        <p>
+                            Acepta Términos Y Condiciones
+                            <input type="checkbox" name="check" id="checkbox" />
+                        </p>
+                        <input class="btn btn-primary btn-block" type="submit" value="Guardar" />
                     </form>
                 </div>
             </div>
-            <div class="col-md-8" id="product-list"></div>
+            <div class="col-md-8 products" id="product-list"></div>
         </main>
     </div>
 
